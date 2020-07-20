@@ -33,7 +33,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s`}
       meta={[
         {
           name: `description`,
@@ -73,9 +73,12 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
+  lang: `ja`,
+  meta: [{
+    name: `viewport`,
+    content: `width=device-width,initial-scale=1`
+  }],
+  description: `lockdef's Profile. About lockdef.`,
 }
 
 SEO.propTypes = {
