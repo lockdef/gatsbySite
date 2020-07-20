@@ -26,7 +26,11 @@ const Image = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  const styles= {
+    borderRadius: '100%'
+  }
+
+  return <Img style={styles} fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
 export default Image
