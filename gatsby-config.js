@@ -4,9 +4,6 @@ module.exports = {
     description: `lockdef's Profile. About lockdef.`,
     author: `@lockdef`,
   },
-  script: {
-    "deploy": "gatsby build && gh-pages -d public -b master"
-  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
