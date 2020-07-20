@@ -26,9 +26,6 @@ const Layout = ({ children }) => {
       <Header />
       <Container>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with lockdef
-        </footer>
       </Container>
     </>
   )
