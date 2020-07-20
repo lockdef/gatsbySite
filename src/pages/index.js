@@ -239,7 +239,7 @@ const IndexPage = () => (
       <Link css={Twitter} to="https://twitter.com/lockdef" target="_blank">Twitter</Link>
       <Link css={Github} to="https://github.com/Lockdef" target="_blank">Github</Link>
       <Link css={AtCoder} to="https://atcoder.jp/users/lockdef" target="_blank">AtCoder</Link>
-      <Link css={oldProfile} to="https://atcoder.jp/users/lockdef" target="_blank">oldProfile</Link>
+      <Link css={oldProfile} to="https://lockdefoldprofile.netlify.app/" target="_blank">oldProfile</Link>
     </Content>
   </Layout>
 )

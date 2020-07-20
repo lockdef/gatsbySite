@@ -78,7 +78,7 @@ SEO.defaultProps = {
     name: `viewport`,
     content: `width=device-width,initial-scale=1`
   }],
-  description: `lockdefプロフィールサイト、lockdefについて`,
+  description: `lockdef's Profile. About lockdef.`,
 }
 
 SEO.propTypes = {
