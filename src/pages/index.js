@@ -79,11 +79,11 @@ const Detail = styled.span`
 const Twitter = css`
   width: 90px;
   display: inline-block;
-  background-color: #1DA1F2;
+  background-color: #1da1f2;
   text-align: center;
   font-weight: bold;
   padding: 5px;
-  color: #FFF;
+  color: #fff;
   border-radius: 5px;
   margin-right: 10px;
   text-decoration: none;
@@ -97,7 +97,7 @@ const Github = css`
   text-align: center;
   font-weight: bold;
   padding: 5px;
-  color: #FFF;
+  color: #fff;
   border-radius: 5px;
   margin-right: 10px;
   text-decoration: none;
@@ -111,7 +111,7 @@ const AtCoder = css`
   text-align: center;
   font-weight: bold;
   padding: 5px;
-  color: #FFF;
+  color: #fff;
   border-radius: 5px;
   margin-right: 10px;
   text-decoration: none;
@@ -125,7 +125,7 @@ const oldProfile = css`
   text-align: center;
   font-weight: bold;
   padding: 5px;
-  color: #FFF;
+  color: #fff;
   border-radius: 5px;
   margin-right: 10px;
   text-decoration: none;
@@ -157,23 +157,26 @@ const Icon = styled.span`
 const calcAge = () => {
   const myBirthday = new Date(2002, 11, 18)
   const today = new Date()
-  const thisYearBirthday = new Date(today.getFullYear(), myBirthday.getMonth(), myBirthday.getDate())
+  const thisYearBirthday = new Date(
+    today.getFullYear(),
+    myBirthday.getMonth(),
+    myBirthday.getDate()
+  )
   const age = today.getFullYear() - myBirthday.getFullYear()
-  return (today < thisYearBirthday) ? age - 1 : age;
+  return today < thisYearBirthday ? age - 1 : age
 }
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="lockdef's Profile" />
+    <SEO title="Profile - defs.dev" />
     <ProfileWrapper>
       <ProfileIcon>
         <Image />
       </ProfileIcon>
       <ProfileSentence>
-<ProfileName>@Lockdef (Age: {calcAge()})</ProfileName>
-        <Content>{`Webフロントエンジニアを生業としています
-          副業で情報系高専生やってます
-          ぺこらの配信を見て生活してます`}</Content>
+        <ProfileName>@lockdef (Age: {calcAge()})</ProfileName>
+        <Content>{`Webフロントエンジニア && 情報系高専生
+          兎田ぺこら推し🐰`}</Content>
       </ProfileSentence>
     </ProfileWrapper>
     <Title>
@@ -187,21 +190,27 @@ const IndexPage = () => (
       2019年 Lefixea Inc. <Detail>エンジニア</Detail>
       <br />
       2020年 メンヘラテクノロジー株式会社 <Detail>Webフロントエンジニア</Detail>
+      <br />
+      2021年 インヴァスト株式会社 <Detail>Webフロントエンジニア</Detail>
     </Content>
     <Title>
-      <Icon>arrow_circle_up</Icon> Activity
+      <Icon>arrow_circle_up</Icon> Activities
     </Title>
     <Content>
-      ビジネスコンテンスト 3度受賞
+      ビジネスコンテンスト 受賞経験 4回
       <br />
-      未踏ジュニア2020採択プロジェクト <Detail>Rocat</Detail>
+      未踏ジュニア2020 採択
       <br />
-      約300人規模のCTFコンテスト運営/開発 <Detail>NITIC CTF</Detail>
+      未踏2021 採択
+      <br />
+      約300人規模のCTFコンテスト運営/開発
       <br />
       深層学習関連の開発、LT発表
+      <br />
+      高専プロコン2021 自由部門 企業賞
     </Content>
     <Title>
-      <Icon>build</Icon> Skill
+      <Icon>build</Icon> Skills
     </Title>
     <Content>
       <strong>Python</strong>
@@ -213,33 +222,50 @@ const IndexPage = () => (
       <strong>JavaScript / TypeScript</strong>
       <List>
         <ListItem>Vue.js / Nuxt.js</ListItem>
-        <ListItem>React.js / Nuxt.js</ListItem>
+        <ListItem>React.js / Next.js</ListItem>
       </List>
       <strong>Other</strong>
       <List>
+        <ListItem>Unity</ListItem>
         <ListItem>Git / Github</ListItem>
         <ListItem>Docker</ListItem>
         <ListItem>Firebase</ListItem>
       </List>
     </Content>
     <Title>
-      <Icon>videogame_asset</Icon> Play Game
+      <Icon>videogame_asset</Icon> Playing Games
     </Title>
     <Content>
       <List>
         <ListItem>AtCoder</ListItem>
-        <ListItem>Minecraft (Hypixel VIP Player)</ListItem>
+        <ListItem>Minecraft</ListItem>
+        <ListItem>Hypixel Skyblock</ListItem>
         <ListItem>Valorant</ListItem>
+        <ListItem>Overwatch</ListItem>
         <ListItem>CHUNITHM (rate: 13.5)</ListItem>
         <ListItem>maimai</ListItem>
       </List>
     </Content>
-    <Title><Icon>link</Icon> Link</Title>
+    <Title>
+      <Icon>link</Icon> Link
+    </Title>
     <Content>
-      <Link css={Twitter} to="https://twitter.com/lockdef" target="_blank">Twitter</Link>
-      <Link css={Github} to="https://github.com/Lockdef" target="_blank">Github</Link>
-      <Link css={AtCoder} to="https://atcoder.jp/users/lockdef" target="_blank">AtCoder</Link>
-      <Link css={oldProfile} to="https://lockdefoldprofile.netlify.app/" target="_blank">oldProfile</Link>
+      <Link css={Twitter} to="https://twitter.com/lockdef" target="_blank">
+        Twitter
+      </Link>
+      <Link css={Github} to="https://github.com/Lockdef" target="_blank">
+        Github
+      </Link>
+      <Link css={AtCoder} to="https://atcoder.jp/users/lockdef" target="_blank">
+        AtCoder
+      </Link>
+      <Link
+        css={oldProfile}
+        to="https://lockdefoldprofile.netlify.app/"
+        target="_blank"
+      >
+        oldProfile
+      </Link>
     </Content>
   </Layout>
 )
